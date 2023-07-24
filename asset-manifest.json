@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Podcast-Platform/static/css/main.4a23eda7.css",
+    "main.js": "/Podcast-Platform/static/js/main.8f127cb1.js",
+    "index.html": "/Podcast-Platform/index.html",
+    "main.4a23eda7.css.map": "/Podcast-Platform/static/css/main.4a23eda7.css.map",
+    "main.8f127cb1.js.map": "/Podcast-Platform/static/js/main.8f127cb1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a23eda7.css",
+    "static/js/main.8f127cb1.js"
+  ]
+}
