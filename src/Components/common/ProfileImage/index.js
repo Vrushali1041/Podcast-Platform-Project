@@ -8,7 +8,7 @@ function ProfileImage(profileImage) {
         <div>
             <Link to={`/profile/`}>
                 <div className="profile-img">
-                    <img className="image" style={{justifyContent:"center"}} src={profileImage} />
+                    <img className="image" style={{justifyContent:"center"}} src={profileImage} alt=""/>
                 </div>
             </Link>
         </div>

@@ -7,7 +7,8 @@ import Button from "../common/Button";
 import FileInput from "../common/input/FileInput";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { auth, db, storage } from "../../firebase";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
+// import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 
 
 
@@ -18,7 +19,9 @@ function CreatePodcastForm() {
     const [bannerImage, setBannerImage] = useState();
 
     const [loading, setLoading] = useState(false);
+   // eslint-disable-next-line
     const navigate = useNavigate();
+   // eslint-disable-next-line
     const dispatch = useDispatch();
 
     const handleSubmit = async () => {
@@ -33,7 +36,7 @@ function CreatePodcastForm() {
                 const bannerImageUrl = await getDownloadURL(bannerImageRef);
 
                const displayImageRef = ref(storage, `podcasts/${auth.currentUser.uid}/${Date.now()}`);
-               await uploadBytes(displayImageRef, bannerImage);
+               await uploadBytes(displayImageRef, displayImage);
                const displayImageUrl = await getDownloadURL(displayImageRef);
              
                const podcastData ={
@@ -43,6 +46,7 @@ function CreatePodcastForm() {
                 displayImage:displayImageUrl,
                 createdBy: auth.currentUser.uid,
                };
+               // eslint-disable-next-line
                const docRef = await addDoc(collection(db, "podcasts"), podcastData);
                setTitle("");
                setDesc("");

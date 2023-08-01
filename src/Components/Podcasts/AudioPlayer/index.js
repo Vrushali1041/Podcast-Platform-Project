@@ -89,7 +89,7 @@ function AudioPlayer({ audioSrc, image }) {
   return (
     <div className="custom-audio-player">
         
-      <img src={image} className="display-image-player" />
+      <img src={image} className="display-image-player"  alt=""/>
 
       <audio ref={audioRef} src={audioSrc} />
 

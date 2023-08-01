@@ -25,7 +25,7 @@ function SignupForm() {
         console.log("Hangling Signup...");
         setLoading(true);
         if (
-            password == confirmPass &&
+            password === confirmPass &&
             password.length >= 6 &&
             fullName && email && profileImage
         ) {
@@ -63,7 +63,7 @@ function SignupForm() {
             }
         } else {
             //throw an error
-            if(password != confirmPass){
+            if(password !== confirmPass){
                 toast.error(
                     "Please Make Sure your Password and Confirm Password matches!"
                 );

@@ -18,6 +18,7 @@ function PodcastDetailsPage() {
 
   console.log("id", id)
 
+   // eslint-disable-next-line
   useEffect(() => {
     if (id) {
       getData();
@@ -81,7 +82,7 @@ function PodcastDetailsPage() {
             >
               <p className="podcast-title-heading" >{podcast.title}</p>
 
-              {podcast.createdBy == auth.currentUser.uid && (
+              {podcast.createdBy === auth.currentUser.uid && (
                 <Button
                   style={{ width: "200px", margin: 0 }}
                   text={"Create Episode"}
@@ -93,7 +94,7 @@ function PodcastDetailsPage() {
             </div>
 
             <div className="banner-wraper">
-              <img src={podcast.bannerImage} />
+              <img src={podcast.bannerImage} alt="" />
             </div>
 
             <p className="podcast-description">{podcast.description}</p>
